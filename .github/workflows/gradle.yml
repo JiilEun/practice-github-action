@@ -54,7 +54,7 @@ jobs:
       
     - name: Code Deploy
       run: aws deploy create-deployment 
-        --application-name github-actions-test-app
-        --deployment-config-name CodeDeployDefault.AllAtOnce
-        --deployment-group-name github-actions-test-app-group
+        --application-name Practice
+        --deployment-config-name CodeDeployDefault.OneAtATime
+        --deployment-group-name Practice-group
         --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=practice-deploy.zip
